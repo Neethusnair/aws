@@ -1,3 +1,14 @@
+terraform {
+  backend "remote" {
+    organization = "sreyo23"
+
+    workspaces {
+      name = "aws"
+    }
+  }
+}
+
+
 provider "aws" {
   region     = "us-west-1"
   #access_key = "******"
